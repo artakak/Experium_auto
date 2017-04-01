@@ -11,7 +11,7 @@ ctrl_index=None, found_index=None, predicate_func=None, active_only=False, contr
 auto_id=None, framework_id=None, backend=None)"""
 
 fake = Factory.create('ru_RU')
-app = Application(backend="win32").connect(title_re="Experium")
+app = Application(backend="win32").connect(title_re=r"Experium\b")
 # app2 = Application(backend="uia").connect(title_re="Experium")
 dlg = app.top_window()
 dlg.set_focus()
